@@ -3,8 +3,50 @@
     <head>
         <meta charset="utf-8" />
         <title>The Odin Project: Weather App</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Gabarito:wght@400..900&family=Iceberg&family=Madimi+One&family=Manrope:wght@200..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&family=Swanky+and+Moo+Moo&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1>Hello world!</h1>
+        <main id="main-container">
+            <section id="content">
+                <div id="search-bar">
+                    <input type="text">
+                    <button type="submit">Search</button>
+                </div>
+
+                <div id="date-address-heading">
+                    <h2 class="date-heading">Wednesday, March 26</h2>
+                    <h2 class="address-heading">Maasin, Eastern Visayas, Philippines</h2>
+                </div>
+
+                <div id="weather-condition">
+                    <img src="assets/icons/rain.png" alt="weather icon" id="weather-icon">
+                    <p class="description">Partly cloudy throughout the day with storms possible.</p>
+                    <p class="temperature">26</p>
+                </div>
+                
+                <div id="wind-humid">
+                    <div id="wind">
+                        <p class="windspeed">6.9</p>
+                        <img src="assets/icons/wind-icon.png" alt="wind icon" id="wind-icon">
+                        <h4>Wind</h4>
+                    </div>
+                    <div id="humidity">
+                        <p class="humid">83.4</p>
+                        <img src="assets/icons/humidity-icon.png" alt="humidity icon" id="humidity-icon">
+                        <h4>Humidity</h4>
+                    </div>
+                </div>
+
+                <div id="future-days"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>
+                Developed by <a href="https://github.com/RobLaran/Odin-Project-WeatherApp">Rob</a>
+            </p>
+        </footer>
     </body>
 </html>
