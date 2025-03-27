@@ -10,36 +10,71 @@
     <body>
         <main id="main-container">
             <section id="content">
-                <div id="search-bar">
+                <div id="search-bar" class="wrapper">
                     <input type="text">
-                    <button type="submit">Search</button>
+                    <button type="submit">
+                        <img src="assets/icons/search-icon.png" alt="search icon" id="search-icon">
+                    </button>
                 </div>
 
-                <div id="date-address-heading">
+                <div id="date-address-heading" class="wrapper">
                     <h2 class="date-heading">Wednesday, March 26</h2>
                     <h2 class="address-heading">Maasin, Eastern Visayas, Philippines</h2>
                 </div>
 
-                <div id="weather-condition">
-                    <img src="assets/icons/rain.png" alt="weather icon" id="weather-icon">
+                <div id="weather-condition" class="wrapper">
+                    <img src="assets/icons/rain.png" alt="weather icon" id="weather-icon" class="main icon">
                     <p class="description">Partly cloudy throughout the day with storms possible.</p>
                     <p class="temperature">26</p>
                 </div>
                 
-                <div id="wind-humid">
-                    <div id="wind">
+                <div id="wind-humid" class="wrapper">
+                    <div id="wind" class="card">
                         <p class="windspeed">6.9</p>
-                        <img src="assets/icons/wind-icon.png" alt="wind icon" id="wind-icon">
+                        <img src="assets/icons/wind-icon.png" alt="wind icon" id="wind-icon" class="main icon">
                         <h4>Wind</h4>
                     </div>
-                    <div id="humidity">
+                    <div id="humidity" class="card">
                         <p class="humid">83.4</p>
-                        <img src="assets/icons/humidity-icon.png" alt="humidity icon" id="humidity-icon">
+                        <img src="assets/icons/humidity-icon.png" alt="humidity icon" id="humidity-icon" class="main icon">
                         <h4>Humidity</h4>
                     </div>
                 </div>
 
-                <div id="future-days"></div>
+                <div id="future-days" class="wrapper">
+                    <div id="future-days-cards" class="wrapper">
+                        <div class="card">
+                            <img src="assets/icons/cloudy.png" alt="" class="secondary icon">
+                            <p class="day">Friday</p>
+                            <p class="temp">29</p>
+                        </div>
+                        <div class="card">
+                            <img src="assets/icons/showers-day.png" alt="" class="secondary icon">
+                            <p class="day"></p>
+                            <p class="temp"></p>
+                        </div>
+                        <div class="card">
+                            <img src="assets/icons/clear-day.png" alt="" class="secondary icon">
+                            <p class="day"></p>
+                            <p class="temp"></p>
+                        </div>
+                        <div class="card">
+                            <img src="assets/icons/fog.png" alt="" class="secondary icon">
+                            <p class="day"></p>
+                            <p class="temp"></p>
+                        </div>
+                        <div class="card">
+                            <img src="assets/icons/thunder-rain.png" alt="" class="secondary icon">
+                            <p class="day"></p>
+                            <p class="temp"></p>
+                        </div>
+                        <div class="card">
+                            <img src="assets/icons/hail.png" alt="" class="secondary icon">
+                            <p class="day"></p>
+                            <p class="temp"></p>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
 
