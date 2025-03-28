@@ -149,19 +149,40 @@ footer {
     flex-direction: column;
 }
 
+#date-address-heading > .address-heading {
+    font-weight: 500;
+}
+
 #weather-condition {
     grid-area: condition;
 
     flex-direction: column;
 }
 
+#weather-condition > .temperature {
+    font-size: 2.8rem;
+}
+
 #wind-humid {
     grid-area: wind-humid;
+
+    display: flex;
+
+    justify-content: space-evenly;
 }
 
 #wind-humid > .card {
     flex-direction: column;
     justify-content: space-evenly;
+
+    width: 110px;
+    height: 140px;
+
+    background-color: var(--secondary-color);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: none;
 }
 
 #future-days {
