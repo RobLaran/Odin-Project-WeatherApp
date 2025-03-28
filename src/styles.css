@@ -26,7 +26,7 @@ html {
 body {
     min-height: 100%;
 
-    background: url(assets/images/moody-forest.jpg);
+    background: url(asset/images/moody-forest.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -161,6 +161,11 @@ footer {
 
 #weather-condition > .temperature {
     font-size: 2.8rem;
+}
+
+#weather-condition > .temperature::after,
+#future-days > #future-days-cards > .card > .temp::after {
+    content: "\00B0";
 }
 
 #wind-humid {
