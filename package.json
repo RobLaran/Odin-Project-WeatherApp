@@ -11,6 +11,8 @@
   },
   "devDependencies": {
     "css-loader": "^7.1.2",
+    "dateformat": "^5.0.3",
+    "dotenv-webpack": "^8.1.0",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.3",
     "style-loader": "^4.0.0",
