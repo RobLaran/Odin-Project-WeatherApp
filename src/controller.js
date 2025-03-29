@@ -12,18 +12,32 @@ const weatherController = (() => {
         weatherView.renderWeather(weatherData);
     };
 
+    const showLoading = () => {
+        document.querySelector('#modal-loader').showModal();
+        document.querySelector('.loader').style = 'display: block;';
+    };
+
+    const hideLoading = () => {
+        document.querySelector('#modal-loader').close();
+        document.querySelector('.loader').style = 'display: none;';
+    };
+
     const handleSearchWeather = () => {
         searchButton.addEventListener('click', () => {
             const cityName = searchInput.value.trim() || 'Maasin';
-            
+
+            showLoading();
+
             setTimeout(() => {
                 fetchWeather(cityName);
-            }, 3000);
+                hideLoading();
+            }, 4000);
         });
     }
 
     const init = () => {
         handleSearchWeather();
+
         fetchWeather();
     };
 
