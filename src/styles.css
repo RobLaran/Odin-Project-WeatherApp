@@ -110,6 +110,10 @@ footer {
     font-size: var(--text-size);
 }
 
+#search-bar > input::placeholder {
+    color: var(--font-color);
+}
+
 #search-bar > input:focus {
     outline: 3px solid var(--secondary-color);
 }

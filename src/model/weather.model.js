@@ -21,7 +21,7 @@ const weatherModel = (() => {
 		};
 	};
 
-	const loadData = async (city='Maasin') => {
+	const loadData = async (city='Manila') => {
 		data = await fetchData(city);
 
 		return formatData();

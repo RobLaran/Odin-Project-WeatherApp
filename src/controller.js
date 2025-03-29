@@ -24,14 +24,14 @@ const weatherController = (() => {
 
     const handleSearchWeather = () => {
         searchButton.addEventListener('click', () => {
-            const cityName = searchInput.value.trim() || 'Maasin';
+            const cityName = searchInput.value.trim() || undefined;
 
             showLoading();
 
             setTimeout(() => {
                 fetchWeather(cityName);
                 hideLoading();
-            }, 4000);
+            }, 2000);
         });
     }
 
