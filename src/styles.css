@@ -190,6 +190,14 @@ footer {
     border: none;
 }
 
+#wind-humid > #wind.card > p.windspeed::after {
+    content: " km/h";
+}
+
+#wind-humid > #humidity.card > p.humid::after {
+    content: " %";
+}
+
 #future-days {
     grid-area: future-days;
 }
@@ -211,4 +219,5 @@ footer {
     flex-direction: column;
     justify-content: space-evenly;
 }
+
 
