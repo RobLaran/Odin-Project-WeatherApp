@@ -221,6 +221,11 @@ footer {
     justify-content: space-evenly;
 }
 
+#github-icon {
+    vertical-align: bottom;
+    margin-left: 8px;
+}
+
 #modal-loader {
     margin: auto;
     display: flex;

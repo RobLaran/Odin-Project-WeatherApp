@@ -6,7 +6,7 @@ const weatherController = (() => {
     const searchInput = document.querySelector('input#search-input');
     const searchButton = document.querySelector('button#submit-button');
     
-    const fetchWeather = async (cityName = 'Maasin') => {
+    const fetchWeather = async (cityName) => {
         const weatherData = await weatherModel.loadData(cityName);
 
         weatherView.renderWeather(weatherData);
