@@ -11,7 +11,7 @@ A simple **weather application** built with **JavaScript, Webpack, and the MVC p
 ✅ Built using **Webpack** with modular **MVC architecture**  
 
 ## 🖥️ Live Demo
-🔗 [Check it out here](YOUR_LIVE_DEMO_URL)  
+🔗 [Check it out here](https://roblaran.github.io/Odin-Project-WeatherApp/)  
 
 ## 🛠️ Technologies Used
 - **JavaScript (ES6+)**
