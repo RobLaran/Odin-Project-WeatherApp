@@ -25,7 +25,6 @@ const alertController = (() => {
     
     const closeAlert = (type) => {
         const alert = document.querySelector('div.alert');
-
         alert.classList.remove('show');
         alert.classList.remove(type);
     };

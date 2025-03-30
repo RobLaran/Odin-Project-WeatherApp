@@ -7,6 +7,7 @@ A simple **weather application** built with **JavaScript, Webpack, and the MVC p
 ✅ Displays **current weather** (temperature, wind speed, humidity)  
 ✅ Shows a **7-day forecast** with icons  
 ✅ Implements **loading indicator** while fetching data  
+✅ Pops **alert notifcation** when data is loaded successfully or not
 ✅ Built using **Webpack** with modular **MVC architecture**  
 
 ## 🖥️ Live Demo
@@ -35,7 +36,8 @@ A simple **weather application** built with **JavaScript, Webpack, and the MVC p
     │       │       └── helpers.js
     │       │
     │       ├── 📂 view # Handles UI updates (View)
-    │       │       └── weather.view.js
+    │       │       ├── weather.view.js
+    │       │       └── alert.view.js
     │       │
     │       ├── api.js # Fetches data from API
     │       ├── controller.js # Handles app logic (Controller)
