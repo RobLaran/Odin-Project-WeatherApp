@@ -1,6 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const miniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
 const isProduction = process.env.NODE_ENV === 'production';
@@ -16,11 +19,18 @@ const config = {
         open: true,
         host: 'localhost',
     },
+    optimization: {
+        minimize: true,
+        minimizer: [`...`, new CssMinimizerPlugin(), new TerserPlugin()],
+    },
     plugins: [
         new HtmlWebpackPlugin({
             template: 'src/index.html',
         }),
-	new Dotenv(),
+        new miniCssExtractPlugin({
+            filename: "styles.css", 
+        }),
+	    new Dotenv(),
 
         // Add your plugins here
         // Learn more about plugins from https://webpack.js.org/configuration/plugins/
@@ -39,7 +49,10 @@ const config = {
 
             {
                 test: /\.css$/i,
-                use: ["style-loader", "css-loader"],
+                use: [
+                    miniCssExtractPlugin.loader, 
+                    "css-loader"  
+                ],
             },
 
             // Add your rules for custom modules here

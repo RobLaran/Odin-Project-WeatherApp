@@ -12,8 +12,7 @@ export const fetchData = async function (city) {
 
         return await response.json();
     } catch(error) {
-        alert(error);
-
+        console.log(error);
         return null;
     }
 }

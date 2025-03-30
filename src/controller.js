@@ -1,5 +1,35 @@
 import weatherModel from "./model/weather.model";
 import weatherView from "./view/weather.view";
+import alertView from "./view/alert.view";
+
+const alertController = (() => {
+    const showAlert = (type) => {
+        let message;
+
+        if(type === 'success') {
+            message = 'Weather data loaded successfully!';
+        } else if(type == 'error') {
+            message = 'Failed to load weather data. Try again.';
+        }
+
+        alertView.popAlert(type, message);
+
+        document.querySelector('.alert-close.button').addEventListener('click', closeAlert);
+
+        setTimeout(() => {
+            closeAlert();
+        },3000);
+    };
+    
+    const closeAlert = () => {
+        const alert = document.querySelector('div.alert');
+
+        alert.classList.remove('show');
+    };
+
+
+    return { showAlert }
+})();
 
 // Controls fetching and displaying data
 const weatherController = (() => {
@@ -9,6 +39,12 @@ const weatherController = (() => {
     const fetchWeather = async (cityName) => {
         const weatherData = await weatherModel.loadData(cityName);
 
+        if(!weatherData) {
+            alertController.showAlert('error');
+            return;
+        }
+
+        alertController.showAlert('success');
         weatherView.renderWeather(weatherData);
     };
 
