@@ -14,17 +14,20 @@ const alertController = (() => {
 
         alertView.popAlert(type, message);
 
-        document.querySelector('.alert-close.button').addEventListener('click', closeAlert);
+        document.querySelector('.alert-close.button').addEventListener('click', () => {
+            closeAlert(type);
+        });
 
         setTimeout(() => {
-            closeAlert();
+            closeAlert(type);
         },3000);
     };
     
-    const closeAlert = () => {
+    const closeAlert = (type) => {
         const alert = document.querySelector('div.alert');
 
         alert.classList.remove('show');
+        alert.classList.remove(type);
     };
 
 

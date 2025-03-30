@@ -17,8 +17,6 @@ const alertView = (() => {
     );
 
     const popAlert = (type, message) => {
-        container.setAttribute('class','');
-
         container.classList.add('show');
         container.classList.add(type);
         alertMessage.innerHTML = message;
